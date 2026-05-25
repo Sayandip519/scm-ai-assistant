@@ -1,0 +1,8 @@
+# Environments
+.env
+.env.*
+
+# API keys / Secrets
+*.key
+*.pem
+secrets.json
