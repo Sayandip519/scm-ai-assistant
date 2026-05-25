@@ -1,5 +1,5 @@
 # SCM Assistant Bot
-**BQBYTE Technologies — Supply Chain RAG Chatbot**
+**Supply Chain RAG Chatbot**
 ---
 
 ## 🔗 Public Chatbot URL
