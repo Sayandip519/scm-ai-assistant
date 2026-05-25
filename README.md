@@ -12,19 +12,19 @@
 | Component | Choice | Notes |
 |---|---|---|
 | Platform | Flowise Cloud (flowiseai.com) | Free tier |
-| LLM | `openai/gpt-oss-120b` 
-| Embeddings | `BAAI/bge-small-en-v1.5` 
-| Vector Store | Qdrant 
+| LLM | `openai/gpt-oss-120b` | Free tier using Groq API |
+| Embeddings | `BAAI/bge-small-en-v1.5` | Free tier using Huggingface API |
+| Vector Store | Qdrant | Free tier |
 | Document Store | Flowise Document Store | Both CSV + PDF loaded |
 
 ---
 
 ## 📂 Data Sources
 
-| File | Description | Chunks (Config A) | Chunks (Config B) |
-|---|---|---|---|
-| `supplier_performance_data.csv` | 2,000 POs across 116 suppliers, 27 columns | `[fill in]` | `[fill in]` |
-| `SupplyChain_Governance_Policy_v3_2_1.pdf` | 10-section governance policy (8 pages) | `[fill in]` | `[fill in]` |
+| File | Description |
+|---|---|
+| `supplier_performance_data.csv` | 2,000 POs across 116 suppliers, 27 columns |
+| `SupplyChain_Governance_Policy_v3_2_1.pdf` | 10-section governance policy (8 pages) |
 
 ---
 
