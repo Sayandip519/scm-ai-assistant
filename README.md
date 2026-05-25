@@ -1,7 +1,5 @@
 # SCM Assistant Bot
 **BQBYTE Technologies — Supply Chain RAG Chatbot**
-Trinamix Inc · Junior AI Engineer Hiring Task · Ref: TX-JrAI-003
-
 ---
 
 ## 🔗 Public Chatbot URL
@@ -54,7 +52,6 @@ https://cloud.flowiseai.com/chatbot/[YOUR-CHATBOT-ID]
 ### Q1: Which Tier-3 suppliers have an active disruption flag, and what response level applies per policy?
 
 **Answer:**
-```
 
 Based on the supplier performance records included in the provided context, **no Tier-3 suppliers with an active disruption flag are present.** The only supplier record supplied (SUP-043) is a Tier-1 supplier and therefore does not meet the criteria you asked about.
 
@@ -73,14 +70,12 @@ If a Tier-3 supplier were to have an active disruption flag, you would first det
 
 **Bottom line:** The current data set does not contain any Tier-3 suppliers flagged for disruption, so no specific response level can be assigned at this time. Should such a supplier appear in the performance register, apply the risk-based response tier as outlined.
 
-```
-
 ---
 
 ### Q2: Which suppliers qualify for the annual Volume Rebate Program and how many are there?
 
 **Answer:**
-```
+
 ### Qualified suppliers for the Annual Volume Rebate Program
 
 | Supplier ID | Tier | OTD Rate % | Defect Rate % | Sustainability Score | Meets all rebate criteria? |
@@ -105,14 +100,11 @@ No other Tier-1 supplier data (with the required annual metrics) is present in t
 *   **Number of suppliers that qualify:** 0
 *   **Qualified supplier list:** none (based on the supplied data)
 
-```
-
 ---
 
 ### Q3: Which region has the highest total PO value, and does it breach the concentration limit?
 
 **Answer:**
-```
 
 ### 1. Total PO value by region (from the six PO records you supplied)
 
@@ -142,14 +134,12 @@ Because the data set you provided contains only LATAM spend, the LATAM share of 
 *   **Concentration limit:** Breached (100 % vs. the 30 % threshold).
 *   **Next steps:** Follow the Level-2 mitigation actions outlined above to bring regional spend back within policy limits.
 
-```
-
 ---
 
 ### Q4: Which suppliers are on Supplier Watch List (SWL) status and what does it restrict?
 
 **Answer:**
-```
+
 ### Suppliers that are currently on the Supplier Watch List (SWL)
 
 Based on the documents you shared, **no supplier is explicitly identified as being on SWL status.**
@@ -177,14 +167,12 @@ The policy only tells us how a supplier would be placed on SWL, not which of the
 *   If a supplier’s compliance score falls below 60 (or they become audit-overdue), they will be placed on SWL, which **caps any new PO volume to 20 %** of the previous quarter’s volume.
 *   If you have a separate data extract (e.g., the Supplier Performance Data register) that includes the latest compliance-score values, you can cross-reference those scores against the < 60 threshold to identify the exact SWL-eligible suppliers.
 
-```
-
 ---
 
 ### Q5: Which product category has the highest average defect rate and does it exceed the Tier-2 limit?
 
 **Answer:**
-```
+
 ### Step 1 – Gather the defect-rate data that are available
 
 | PO ID | Product Category | Defect Rate % |
@@ -215,8 +203,6 @@ The EC average 2.21 % is **below** the Tier-2 ceiling of 2.50 %.
 
 *   **Product category with the highest average defect rate:** Electronic Components (EC) – average 2.21 %.
 *   **Does it exceed the Tier-2 limit?** No. The Tier-2 maximum allowed defect rate is 2.50 %, and the EC average of 2.21 % stays within that bound.
-
-```
 
 ---
 
