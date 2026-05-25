@@ -4,11 +4,7 @@
 
 ## 🔗 Public Chatbot URL
 
-```
-https://cloud.flowiseai.com/chatbot/[YOUR-CHATBOT-ID]
-```
-> Replace `[YOUR-CHATBOT-ID]` with your actual chatbot ID after publishing.
-
+[https://cloud.flowiseai.com/chatbot/27e3efc0-d637-4f17-8777-32e3361a4b58](https://cloud.flowiseai.com/chatbot/27e3efc0-d637-4f17-8777-32e3361a4b58)
 ---
 
 ## ⚙️ Tech Stack
@@ -16,9 +12,9 @@ https://cloud.flowiseai.com/chatbot/[YOUR-CHATBOT-ID]
 | Component | Choice | Notes |
 |---|---|---|
 | Platform | Flowise Cloud (flowiseai.com) | Free tier |
-| LLM | `[e.g. gpt-4o-mini / claude-3-haiku / gemini-flash]` | Replace with your choice |
-| Embeddings | `[e.g. text-embedding-3-small / nomic-embed-text]` | Replace with your choice |
-| Vector Store | Flowise in-memory / Pinecone / Qdrant | Replace with your choice |
+| LLM | `openai/gpt-oss-120b` 
+| Embeddings | `BAAI/bge-small-en-v1.5` 
+| Vector Store | Qdrant 
 | Document Store | Flowise Document Store | Both CSV + PDF loaded |
 
 ---
@@ -408,23 +404,22 @@ Even though we cannot point to a specific supplier, the policy does define the r
 
 ## 📸 Screenshots
 
-| Step | File |
-|---|---|
-| 1. Flowise account created | `screenshots/01_account_created.png` |
-| 2. Document Store created | `screenshots/02_document_store.png` |
-| 3. CSV loaded (Config A chunks) | `screenshots/03_csv_chunks_config_a.png` |
-| 4. PDF loaded (Config A chunks) | `screenshots/04_pdf_chunks_config_a.png` |
-| 5. CSV loaded (Config B chunks) | `screenshots/05_csv_chunks_config_b.png` |
-| 6. PDF loaded (Config B chunks) | `screenshots/06_pdf_chunks_config_b.png` |
-| 7. Chatflow canvas | `screenshots/07_chatflow_canvas.png` |
-| 8. Chatflow settings (LLM + embed config) | `screenshots/08_chatflow_settings.png` |
-| 9. Share Chatbot panel (Make Public ON) | `screenshots/09_share_chatbot_public.png` |
-| 10. Q1 answer in chat panel | `screenshots/10_qa_q1.png` |
-| 11. Q2 answer in chat panel | `screenshots/11_qa_q2.png` |
-| 12. Q3 answer in chat panel | `screenshots/12_qa_q3.png` |
-| 13. Q4 answer in chat panel | `screenshots/13_qa_q4.png` |
-| 14. Q5 answer in chat panel | `screenshots/14_qa_q5.png` |
-| 15. Public URL verified in incognito | `screenshots/15_incognito_verification.png` |
+Screenshots/
+├── Chatbot_config.png
+├── Configuration_1/
+│   ├── CSV_chunk.png
+│   ├── Embedding Configuration.png
+│   └── pdf_chunk.png
+├── Configuration_2/
+│   ├── csv_chunk.png
+│   ├── Embedding Configuration.png
+│   └── pdf_chunk.png
+└── Q&A/
+    ├── Q1.png
+    ├── Q2.png
+    ├── Q3.png
+    ├── Q4.png
+    └── Q5.png
 
 ---
 
@@ -454,9 +449,6 @@ scm-assistant-bot/
 ├── README.md                 # This file
 ├── .gitignore                # Excludes .env and API keys
 └── screenshots/
-    ├── 01_account_created.png
-    ├── 02_document_store.png
-    └── ...
 ```
 
 ---
