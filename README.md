@@ -404,6 +404,7 @@ Even though we cannot point to a specific supplier, the policy does define the r
 
 ## 📸 Screenshots
 
+```
 Screenshots/
 ├── Chatbot_config.png
 ├── Configuration_1/
@@ -420,7 +421,7 @@ Screenshots/
     ├── Q3.png
     ├── Q4.png
     └── Q5.png
-
+```
 ---
 
 ## 🚀 What I Would Improve
