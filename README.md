@@ -208,9 +208,7 @@ The EC average 2.21 % is **below** the Tier-2 ceiling of 2.50 %.
 ### Configuration B — Large Chunks (Context-focused)
 - **Chunk Size:** 800 tokens
 - **Chunk Overlap:** 100 tokens
-- **Splitter:** Recursive Character Text Splitter
-- **CSV Chunk Count:** `[fill in from Flowise upsert screen]`
-- **PDF Chunk Count:** `[fill in from Flowise upsert screen]`
+- **Splitter:** Token Text Splitter
 
 **Observation:** Smaller chunks improve retrieval precision for specific policy clauses (e.g. exact penalty percentages) but can miss context that spans multiple paragraphs. Table rows from the CSV are cleanly isolated.
 
