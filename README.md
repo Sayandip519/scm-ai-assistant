@@ -227,45 +227,184 @@ The EC average 2.21 % is **below** the Tier-2 ceiling of 2.50 %.
 ### Q1: Which Tier-3 suppliers have an active disruption flag, and what response level applies per policy?
 
 **Answer:**
-```
-[PASTE VERBATIM CHATBOT ANSWER HERE]
-```
+
+### Answer based on the supplied documents
+
+| Tier-3 Supplier (as shown in the provided data) | Active Disruption Flag | Policy-Defined Response Level |
+| :--- | :--- | :--- |
+| No Tier-3 supplier records with an active disruption flag are present in the supplied context. | – | – |
+
+### Why no Tier-3 suppliers can be listed
+
+The only supplier record included in the provided documents is **SUP-043 (Tasman Circuit Boards)**, which is explicitly identified as a **Tier-1** supplier (see doc 3).
+
+No other supplier entries (Tier-2 or Tier-3) are included in the excerpts you shared.
+
+According to the instruction to use only the provided context and not invent data, we cannot assume the existence of additional Tier-3 suppliers.
+
+### How the response level would be determined (for reference)
+
+If a Tier-3 supplier did have an active disruption flag, the applicable response tier would be derived from Section 9 – Disruption Response Procedures (doc 0) and the risk-level definitions in Section 2 (doc 2):
+
+| Supplier Risk Level | Disruption-Flag Situation | Policy-Defined Response Level |
+| :--- | :--- | :--- |
+| **Low Risk** (no other risk factors, compliance > 85, etc.) | Any active disruption flag | **Level 1 – Monitor** (weekly status update; safety stock +15 %) |
+| **Medium Risk** (one or more medium-risk factors, compliance 75-85, etc.) | Any active disruption flag | **Level 2 – Manage** (bi-weekly escalation calls; safety stock +30 %; alternate supplier on 48-hour readiness) |
+| **High Risk** (two or more medium-risk factors, or any high-risk factor such as active labour dispute, export-control restriction, etc.) | Any active disruption flag or two simultaneous flags | **Level 3 – Activate** (immediate CPO escalation; safety stock +50 %; alternate supplier ≥40 % volume within 10 business days; RCA within 15 business days) |
+| **Mandatory Level 3** (regardless of risk) | Disruption category is one of: export-control restrictions, active labour strikes, regulatory enforcement actions, or port-closure > 72 h | **Level 3 – Activate** (as above) |
+
+Thus, if a Tier-3 supplier with an active disruption flag were identified in the data, you would first determine its Risk_Level (Low, Medium, or High) using the criteria in doc 2, then apply the corresponding response tier from doc 0 (with the mandatory Level 3 overrides listed in doc 1).
+
+### Bottom line
+* The current dataset does not contain any Tier-3 suppliers flagged for disruption, so no specific supplier names or response levels can be reported at this time. 
+* If you can provide the relevant Tier-3 supplier records, I can immediately apply the policy rules and tell you the exact response level for each.
 
 ---
 
 ### Q2: Which suppliers qualify for the annual Volume Rebate Program and how many are there?
 
 **Answer:**
-```
-[PASTE VERBATIM CHATBOT ANSWER HERE]
-```
+
+### Suppliers that meet the Volume-Rebate eligibility rules
+
+| Supplier (ID) | Tier | OTD % (annual average) | Defect % (annual average) | Sustainability Score (annual) | Meets all rebate criteria? |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| SUP-112 – Maplewood Polymer Corp | Tier-1 | 90.3 %* | 1.03 %* | 91* | **No** |
+
+*\* The figures shown are the simple average of the four quarterly PO records supplied (Q1-Q4 2024). None of the quarterly values reach the required thresholds, so the annual average also falls short.*
+
+### Why no supplier qualifies
+
+The Volume Rebate Program (Section 4.2 of the Supplier Governance Policy) applies only to **Tier-1 suppliers** that, for an entire calendar year, satisfy all of the following:
+
+| Requirement | Threshold |
+| :--- | :--- |
+| **On-Time Delivery (OTD) rate** | ≥ 93.0 % |
+| **Defect rate** | < 0.5 % |
+| **Sustainability score** | ≥ 85 |
+
+The only Tier-1 supplier present in the supplied data set is **SUP-112 (Maplewood Polymer Corp)**. Its quarterly performance is:
+
+| Quarter | OTD % | Defect % | Sustainability |
+| :--- | :--- | :--- | :--- |
+| **Q1-2024** | 93.8 | 1.60 | 92 |
+| **Q2-2024** | 88.7 | 1.48 | 96 |
+| **Q3-2024** | 89.5 | 0.58 | 95 |
+| **Q4-2024** | 89.1 | 1.35 | 82 |
+
+* **OTD:** Only Q1 meets the ≥ 93 % threshold; the other three quarters are below it.
+* **Defect rate:** All quarters exceed the < 0.5 % limit.
+* **Sustainability:** Q4 falls below the required ≥ 85 score.
+
+Because the supplier does not satisfy any one of the three criteria for the full year, it is ineligible for the rebate.
+
+### Total number of qualifying suppliers
+
+* **Qualified suppliers:** 0
+* **Total qualifying count:** 0
+
+**Conclusion:** Based on the provided supplier performance data, no supplier qualifies for the annual Volume Rebate Program, and the count of qualifying suppliers is zero. If additional Tier-1 supplier records become available, the same eligibility checks can be applied to determine any qualifiers.
 
 ---
 
 ### Q3: Which region has the highest total PO value, and does it breach the concentration limit?
 
 **Answer:**
-```
-[PASTE VERBATIM CHATBOT ANSWER HERE]
-```
+
+### Region with the highest total PO value
+
+| Region | PO-Value (USD) – summed from the supplied PO records |
+| :--- | :--- |
+| **LATAM** | $856,463.08 |
+| **EMEA** | $326,516.24 |
+| **APAC** | $197,819.88 |
+
+The LATAM total comes from the two LATAM purchase orders in the data set (PO-11023 = $560,124.18 and PO-11835 = $296,338.90).
+
+### Does this breach the concentration limit?
+
+The Supplier Governance Policy’s “concentration-limit” rule (the maximum share of total spend that any single region may represent) is not included in the documents you provided. Because the policy threshold is missing, we cannot determine from the available information whether the LATAM share of $856,463.08 exceeds the allowed concentration limit.
+
+### What you can do next
+
+* Provide the specific policy clause that defines the concentration-limit percentage (e.g., “no region may exceed 40 % of total annual PO spend”).
+* Once the threshold is known, we can calculate the overall spend across all regions (here: $856,463.08 + $326,516.24 + $197,819.88 = **$1,380,799.20**) and compare LATAM’s share (**≈ 62 %**) to the limit.
+* Until the policy limit is supplied, we can only state that **LATAM** has the highest PO value, but we cannot confirm whether it breaches the concentration rule.
 
 ---
 
 ### Q4: Which suppliers are on Supplier Watch List (SWL) status and what does it restrict?
 
 **Answer:**
-```
-[PASTE VERBATIM CHATBOT ANSWER HERE]
-```
+
+### Suppliers that are on Supplier Watch List (SWL) status
+
+| Supplier ID | Reason for SWL (as indicated in the source documents) |
+| :--- | :--- |
+| No supplier can be identified from the excerpts you have provided. | – |
+
+### Why no supplier can be listed
+
+The policy excerpts you supplied contain the rules that place a supplier on the Supplier Watch List, but they do not include any actual supplier-specific data (e.g., compliance-score results, last-audit dates, or explicit SWL designations). The only supplier-specific mentions in the documents are:
+
+| Supplier ID | Context in the documents |
+| :--- | :--- |
+| **SUP-005, SUP-012, SUP-015, SUP-023** | Lead-time values that are near the ELTRP review boundary (no compliance-score or audit data). |
+| **SUP-009, SUP-017, SUP-003** | Alternate-supplier relationships (no compliance-score or audit data). |
+| **SUP-043** | Identified as a Tier-1 supplier in a separate answer (no compliance-score or audit data). |
+
+Because the policy requires quantitative triggers (e.g., “Compliance Score < 60 at any audit” or “Audit overdue beyond the tier-specific threshold”) to actually place a supplier on SWL, and none of those trigger values are present for any supplier in the material you shared, we cannot name any supplier as being on SWL.
+
+### What SWL status restricts
+
+Even though we cannot point to a specific supplier, the policy does define the restriction that applies to any supplier placed on the Supplier Watch List:
+
+| Restriction | Description |
+| :--- | :--- |
+| **New PO issuance limit** | When a supplier is on SWL, the volume of new purchase orders that may be issued to that supplier is capped at **20 %** of the prior-quarter’s total PO volume for that supplier. |
+| **Other operational impacts** | (Implied) The reduced PO limit is intended to mitigate risk while the supplier works to improve its compliance or audit standing. No other penalties (e.g., financial penalties) are listed specifically for SWL status in the excerpts you provided. |
+
+### Bottom line
+
+* **No supplier can be confirmed** as being on SWL from the information you have given.
+* If you can supply any of the following data, we can immediately determine SWL status:
+    * The most recent Compliance Score for each supplier (0-100 scale).
+    * The date of the last audit for each supplier (to evaluate the audit-overdue thresholds).
+    * Any explicit SWL flag that may already be recorded in the performance register.
+* Once that data is available, we will apply the policy rules (Compliance < 60 → SWL; audit overdue beyond tier-specific limits → provisional SWL) and provide a definitive list of suppliers on the Watch List, together with the 20 % PO-issuance restriction that applies to each.
 
 ---
 
 ### Q5: Which product category has the highest average defect rate and does it exceed the Tier-2 limit?
 
 **Answer:**
-```
-[PASTE VERBATIM CHATBOT ANSWER HERE]
-```
+
+| Product Category | Defect-Rate (average) | Tier-2 Maximum Defect-Rate | Exceeds Tier-2 limit? |
+| :--- | :--- | :--- | :--- |
+| Electronic Components (EC) | 2.095 % (average of the two supplied PO records) | 2.50 % (see Tier-2 limits in the Supplier Tier Classification Framework) | **No** – the average is below the Tier-2 ceiling. |
+
+### How the calculation was done
+
+**Identify the product-category data that are present**
+*   Both PO records you supplied (PO-10002 and PO-11278) belong to Product_Category = “Electronic Components” (SKU-EC-xxxx).
+*   No other product-category rows appear in the provided documents, so EC is the only category we can compute an average for.
+
+**Extract the defect-rate values**
+*   PO-10002: Defect_Rate_Pct = 2.09 %
+*   PO-11278: Defect_Rate_Pct = 2.10 %
+
+**Compute the simple arithmetic mean**
+*   (2.09 % + 2.10 %) ÷ 2 = 2.095 %
+
+**Compare with the Tier-2 threshold**
+*   Tier-2 maximum permissible defect rate (from the Tier Classification Framework, doc 0) = 2.5 %.
+*   2.095 % < 2.5 % → the limit is not breached.
+
+### Summary
+
+*   The **Electronic Components (EC)** category has the highest (and only) average defect rate in the data you provided, at **≈ 2.10 %**.
+*   This average **does not exceed** the Tier-2 defect-rate ceiling of 2.5 %, so the category remains within the allowed performance band for Tier-2 suppliers.
+*   If additional PO records for other categories become available, the same method can be applied to recompute the averages and re-evaluate compliance.
 
 ---
 
