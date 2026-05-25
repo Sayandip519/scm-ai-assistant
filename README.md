@@ -35,13 +35,11 @@ https://cloud.flowiseai.com/chatbot/[YOUR-CHATBOT-ID]
 ## 🔧 Chunk Configuration Experiments
 
 ### Configuration A — Small Chunks (Precision-focused)
-- **Chunk Size:** 500 tokens
-- **Chunk Overlap:** 50 tokens
+- **Chunk Size:** 1000 tokens
+- **Chunk Overlap:** 200 tokens
 - **Splitter:** Recursive Character Text Splitter
-- **CSV Chunk Count:** `[fill in from Flowise upsert screen]`
-- **PDF Chunk Count:** `[fill in from Flowise upsert screen]`
 
-**Observation:** Smaller chunks improve retrieval precision for specific policy clauses (e.g. exact penalty percentages) but can miss context that spans multiple paragraphs. Table rows from the CSV are cleanly isolated.
+**Observation:** Larger chunks preserve more policy context per retrieval (better for multi-clause questions like disruption response levels), but can dilute relevance scores when the question targets a single fact. Recommended for policy-heavy queries.
 
 ## ❓ Sample Q&A — Chatbot Answers (Verbatim)
 
@@ -208,13 +206,13 @@ The EC average 2.21 % is **below** the Tier-2 ceiling of 2.50 %.
 
 
 ### Configuration B — Large Chunks (Context-focused)
-- **Chunk Size:** 1500 tokens
-- **Chunk Overlap:** 200 tokens
+- **Chunk Size:** 800 tokens
+- **Chunk Overlap:** 100 tokens
 - **Splitter:** Recursive Character Text Splitter
 - **CSV Chunk Count:** `[fill in from Flowise upsert screen]`
 - **PDF Chunk Count:** `[fill in from Flowise upsert screen]`
 
-**Observation:** Larger chunks preserve more policy context per retrieval (better for multi-clause questions like disruption response levels), but can dilute relevance scores when the question targets a single fact. Recommended for policy-heavy queries.
+**Observation:** Smaller chunks improve retrieval precision for specific policy clauses (e.g. exact penalty percentages) but can miss context that spans multiple paragraphs. Table rows from the CSV are cleanly isolated.
 
 **Chosen Config for Final Deployment:** Configuration B — better suited for cross-referencing policy sections with supplier data.
 
